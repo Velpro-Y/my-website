@@ -1,0 +1,168 @@
+/* 基本页面样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* 初始的背景渐变色 */
+    background-size: 400% 400%; /* 增大背景尺寸以实现动画效果 */
+    animation: gradientBackground 15s ease infinite; /* 动态背景动画 */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* 动态背景的关键帧动画 */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards; /* 增加了 1s 的过渡时间 */
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #00796b;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #004d40;
+    transition: color 0.3s;
+}
+
+h2:hover {
+    color: #00332e;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* 图标和链接样式 */
+a {
+    color: #00796b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #004d40;
+}
+
+i {
+    margin-right: 10px;
+}
+
+/* 信息网格样式 */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* 列表样式 */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #004d40;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+ul li:hover {
+    transform: translateY(-2px);
+    background-color: #00695c;
+}
+
+/* 段落和文本样式 */
+p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* 教育背景部分的列表样式 */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行展示三列 */
+    gap: 10px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.course-list li {
+    margin-bottom: 4px;
+    font-size: 1em;
+    line-height: 1;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
